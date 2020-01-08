@@ -10,9 +10,10 @@ You must start off with a parent div with the class **container**.
 Any items which belong to the Grid must then be placed as child elements of the parent element, with the class name of **item**.
 
 ### CSS Grid Properties
-grid-template-columns - define the size and number of columns in the grid.
-grid-template-rows - define the size and number of rows in the grid.
-grid-gap - adds some margin around each grid element.
+
+- grid-template-columns - define the size and number of columns in the grid.
+- grid-template-rows - define the size and number of rows in the grid.
+- grid-gap - adds some margin around each grid element.
 
 ## 4: CSS Grid Dev Tools
 Solid Line: Explicit Grid Edge
