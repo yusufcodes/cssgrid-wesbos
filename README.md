@@ -35,6 +35,44 @@ grid-auto-flow allows for you to define exactly what happens when extra rows or 
 
 By default, if we have defined 2 columns for instance, any extra elements will start on a new row. However, if we wanted to create a new column instead, we can set grid-auto-flow to 'column' which will ensure that any new item is always placed in a brand new column.
 
+## 7: Sizing tracks in CSS Grid
+
+The fr unit is a great unit to use, because it dictates what the Grid should do with the excess remaining space of the given elements. This allows for an even distribution of Grid elements, e.g:
+
+```css
+.container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+```
+
+This will create 4 evenly distributed columns with the contents of your grid.
+
+## 8: CSS Grid Repeat Function
+
+Looking back at the previous example, it can be written in a better way to save typing:
+
+```css
+.container {
+    grid-template-columns: repeat(4, 1fr);
+}
+```
+
+## 9: Sizing Grid Items
+After selecting a particular grid element via ID/Class, the following properties can be used in relation to the item size:
+
+- grid-column
+- grid-row
+
+We can have an element take up two columns in the grid, making it wider, and also take up two rows, making it longer, with the following code:
+
+```css
+.item9 {
+    background: mistyrose;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+```
+
 ## Extra Notes
 Notes in this section may be from other sources, such as Mozilla Developer Network or CSS-Tricks.
 
