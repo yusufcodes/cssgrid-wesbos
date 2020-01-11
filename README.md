@@ -78,7 +78,7 @@ We can have an element take up two columns in the grid, making it wider, and als
 
 - **grid-column**:
   - grid-column-start: You can specify a track value here to specify where to start at.
-  - grid-column-end: You can specify a track value here to specify where to start at.
+  - grid-column-end: You can specify a track value here to specify where to end at.
 
 
 ```css
