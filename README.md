@@ -101,6 +101,91 @@ We can have an element take up two columns in the grid, making it wider, and als
 }
 ```
 
+## 12: auto-fit and auto-fill
+- **auto-fill**: Grid will fit as many columns as possible. The Grid is populated in preparation for expected elements.  */
+- **auto-fit**: Grid will force each item into a natural flow, without anticipating future elements like auto-fill. The explicit Grid created ends at the
+final element with this, whereas with auto-fill, even if there are not enough elements, the Grid is still populated for the eventual addition of any other elements. 
+
+Example usage:
+
+```css
+
+.container
+{
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-columns: repeat(auto-fit, 150px);
+}
+```
+
+## 13: Using minmax() for Responsive Grids
+
+'minmax' can be used to define the smallest (min) and largest (max) size of a given element.
+
+Example usage:
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+```
+Here we are telling the columns to do two things:
+1. 'auto-fit' to position themselves as widely and evenly as possible within its container
+2. The size of each element can be a minimum of 150px if the size allows for it, otherwise take up 1fr unit, meaning whatever free space is left to take up.
+
+## 14: Grid Template Areas
+Grid Template Areas are a way to name the different sections of the Grid. The property used is called **grid-template-areas**. Below is the basic syntax for its usage:
+
+```css
+.container
+{
+ grid-template-areas:
+      "sidebar-1 content sidebar-2"
+}
+```
+
+The syntax roughly follows the structure of the actual Grid. So, the first three columns that are present will be called **sidebar-1**, **content**, and **sidebar-2** respectively.
+
+To continue defining the other areas of the Grid, such as rows below it, you continue on a new line with either the same name to define a whole area, or a new name to identify a new section of the grid.
+
+```css
+.container
+{
+ grid-template-areas:
+      "sidebar-1 content sidebar-2"
+      "sidebar-1 content sidebar-2"
+      "footer footer footer";
+}
+```
+
+Using your pre-defined class names for each of the elements on the page, you can use the Grid Template Area names to define where to place such elements. An example is shown below:
+
+```css
+.footer
+{
+    grid-area: footer;
+}
+
+.item1
+{
+    grid-area: sidebar-1;
+}
+
+.item2
+{
+    grid-area: content;
+}
+
+.item3
+{
+    grid-area: sidebar-2;
+}
+```
+
+This is saying that, for each item selected, place it in the defined area of the grid that we have specified. The element being placed will naturally position itself into the named section of the grid, using **grid-area**.
+
+### Using Grid Template Area names as Line Names
+
+Rather than specify a line number, you can use the names given followed by **-start** or **-end**. For example, **footer-start** would define an element to begin at the first line created for the 'footer' area of the Grid.
 
 ```css
 
