@@ -187,6 +187,31 @@ This is saying that, for each item selected, place it in the defined area of the
 
 Rather than specify a line number, you can use the names given followed by **-start** or **-end**. For example, **footer-start** would define an element to begin at the first line created for the 'footer' area of the Grid.
 
+## 15: Naming Lines in CSS Grid
+
+When defining your rows and columns, you can explicitly define the names of the lines which will be associated with them. This allows for you to refer to them by name and not number.
+
+To do this, you place the name of the line within a pair of [], before or after the declaration of the column/row size. If this is written **before** the size, it will name the first line, and if placed **after**, it will name the ending line.
+
+```css
+.container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns:
+      [sidebar-start site-left] 1fr
+      [sidebar-end content-start] 500px
+      [content-end] 1fr [site-right];
+      grid-template-rows: [content-top] repeat(10, auto) [content-bottom];
+    }
+
+    .item3 {
+      background: slateblue;
+      grid-column: content-start;
+      grid-row: content-top / content-bottom;
+      /* grid-row: 1 / span 10; */
+    }
+```
+
 ```css
 
 ```
