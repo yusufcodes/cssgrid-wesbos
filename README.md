@@ -212,6 +212,50 @@ To do this, you place the name of the line within a pair of [], before or after 
     }
 ```
 
+## 16: grid-auto-flow dense Block Fitting
+The **dense** value of the **grid-auto-flow** property can be used to fill in any extra gaps in your Grid when there are gaps due to the sizing of different elements. 
+
+For example, on the first row, one of the items may be too large to fit onto it, so naturally will be placed on the second row. However, this normally leave a huge gap in place of where the item does not fit. 
+
+The dense value prevents this from happening as it locates items further on in the Grid, which, if they are small enough, can be fit in this place instead.
+```css
+.container {
+      ...
+      grid-auto-flow: dense;
+    }
+```
+
+## 17: CSS Grid Alignment + Centering
+
+Properties that can be used for alignment and centering. The headings refer to the word used in the ending of each, where they all start with either **justify** or **align**:
+
+### Items
+
+- justify-items: The actual element itself
+- align-items
+
+### Content
+
+- justify-content: Utilising excess Grid space, targets all elements
+- align-content
+
+### Self
+
+- align-self: Overriding ? **Need more clarification on this**
+- justify-self
+
+*justify*: Along the X Axis
+*align*: Along the Y Axis
+
+## 18: Re-ordering Grid Items
+
+Items can be given the **order** property with a **numbered value** to denote the order of the elements.
+
+## Nesting Grid with Album Layouts
+
+
+
+
 ```css
 
 ```
