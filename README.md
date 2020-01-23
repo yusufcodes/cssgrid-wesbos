@@ -215,9 +215,9 @@ To do this, you place the name of the line within a pair of [], before or after 
 ## 16: grid-auto-flow dense Block Fitting
 The **dense** value of the **grid-auto-flow** property can be used to fill in any extra gaps in your Grid when there are gaps due to the sizing of different elements. 
 
-For example, on the first row, one of the items may be too large to fit onto it, so naturally will be placed on the second row. However, this normally leave a huge gap in place of where the item does not fit. 
+For example, on the first row, one of the items may be too large to fit onto it, so naturally will be placed on the second row. However, this normally leaves a huge gap in place of where the item does not fit. 
 
-The dense value prevents this from happening as it locates items further on in the Grid, which, if they are small enough, can be fit in this place instead.
+The **dense** value prevents this from happening as it locates items further on in the Grid, which, if they are small enough, can be fit in this place instead.
 ```css
 .container {
       ...
@@ -251,16 +251,14 @@ Properties that can be used for alignment and centering. The headings refer to t
 
 Items can be given the **order** property with a **numbered value** to denote the order of the elements.
 
-## Nesting Grid with Album Layouts
+## 19 - Nesting Grid with Album Layouts
+## 20 - CSS Grid Image Gallery
+Both of these are small mini-projects to practice CSS Grid, no new knowledge gained therefore no notes made for these sections.
 
-
+## 21 - Flexbox vs CSS Grid
 
 
 ```css
 
 ```
-
-## Extra Notes
-Notes in this section may be from other sources, such as Mozilla Developer Network or CSS-Tricks.
-
 

@@ -53,7 +53,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 100px);
+      grid-template-columns: repeat(auto-fill, 100px); /* Create as many columns needed, sized 100px */
       grid-auto-rows: 100px; /* Implicit Rows will have a width of 100px */
       grid-auto-flow: dense; /* Auto places items into smaller sections */
     }
@@ -85,7 +85,7 @@
       justify-items: center;
       align-items: center;
       transition: 0.2s;
-      transform: translateY(100%)
+      transform: translateY(100%);
     }
 
     .item__overlay button
@@ -94,7 +94,7 @@
       border: 2px solid white;
       color: white;
       text-transform: uppercase;
-      background: rgba(0, 0, 0, 0.7));
+      background: rgba(0, 0, 0, 0.7);
       padding: 5px;
     }
 
@@ -102,7 +102,6 @@
     {
       transform: translateY(0);
     }
-
 
     /* Vertical Spanning */
     .item.v2 
